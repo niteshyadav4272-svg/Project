@@ -15,7 +15,7 @@ connectDB();
 
 app.use(
     cors({
-        origin: "http://localhost:5173",
+        origin: process.env.FRONTEND,
         credentials: true,
     })
 );
@@ -25,6 +25,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
+console.log(process.env.SMPT_PASSWORD)
+console.log(process.env.SMPT_EMAIL)
 app.use("/api/messages", messageRoutes);
 
 app.get("/", (req, res) => {

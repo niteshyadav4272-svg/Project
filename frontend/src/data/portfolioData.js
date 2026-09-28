@@ -103,6 +103,7 @@ const portfolioData = {
         },
     ],
 
+    // project
     projects: [
     {
         title: "Filemoon",
@@ -121,8 +122,6 @@ const portfolioData = {
         ],
 
         github: "https://github.com/",
-        liveDemo: "https://example.com/",
-        video: "https://www.youtube.com/",
     },
 
     {
@@ -142,8 +141,6 @@ const portfolioData = {
         ],
 
         github: "https://github.com/",
-        liveDemo: "https://example.com/",
-        video: "https://www.youtube.com/",
     },
 
     {
@@ -163,10 +160,9 @@ const portfolioData = {
         ],
 
         github: "https://github.com/",
-        liveDemo: "https://example.com/",
-        video: "https://www.youtube.com/",
     },
 ],
+  
     skills: [
         // =========================
         // Frontend

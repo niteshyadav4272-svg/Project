@@ -8,15 +8,9 @@ const messageSchema = new mongoose.Schema(
             trim: true,
         },
 
-        email: {
+        whatsapp: {
             type: String,
             required: true,
-            trim: true,
-            lowercase: true,
-        },
-
-        subject: {
-            type: String,
             trim: true,
         },
 

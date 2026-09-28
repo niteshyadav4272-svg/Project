@@ -8,6 +8,8 @@ import Experience from "../sections/Experience";
 import Education from "../sections/Education";
 import Contact from "../sections/Contact";
 import Resume from "../sections/Resume";
+import WhatsAppButton from "../Component/WhatsAppButton";
+import ResumePopup from "../Component/ResumePopup";
 
 
 import Footer from "../Component/Footer";
@@ -19,9 +21,9 @@ const Home = () => {
 
             <main>
                 <Hero />
-                <Services />
-                <Skills />
                 <Projects />
+                <Skills />
+                <Services />
                 <Experience />
                 <Education />
                 <Resume />
@@ -29,6 +31,8 @@ const Home = () => {
             </main>
 
             <Footer />
+            <ResumePopup />
+             <WhatsAppButton />
         </>
     );
 };

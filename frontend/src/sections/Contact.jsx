@@ -5,7 +5,7 @@ import api from "../services/api";
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
-        email: "",
+        whatsapp: "",
         message: "",
     });
 
@@ -54,7 +54,7 @@ const Contact = () => {
 
             setFormData({
                 name: "",
-                email: "",
+                whatsapp: "",
                 message: "",
             });
 
@@ -75,7 +75,13 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="relative overflow-hidden bg-[#1f2024] px-6 py-24"
+            className="
+                relative
+                overflow-hidden
+                bg-[#1f2024]
+                px-6
+                py-24
+            "
         >
             <div className="mx-auto max-w-3xl">
 
@@ -84,7 +90,18 @@ const Contact = () => {
                     title="Let's Work Together"
                 />
 
-                <p className="mx-auto mt-5 max-w-xl text-center text-sm leading-6 text-gray-400 sm:text-base">
+                <p
+                    className="
+                        mx-auto
+                        mt-5
+                        max-w-xl
+                        text-center
+                        text-sm
+                        leading-6
+                        text-gray-400
+                        sm:text-base
+                    "
+                >
                     Have an opportunity, hiring requirement, or just want
                     to connect? Feel free to reach out.
                 </p>
@@ -104,6 +121,9 @@ const Contact = () => {
                         md:p-8
                     "
                 >
+
+                    {/* Name */}
+
                     <input
                         type="text"
                         name="name"
@@ -129,13 +149,17 @@ const Contact = () => {
                         "
                     />
 
+                    {/* WhatsApp Number */}
+
                     <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
+                        type="tel"
+                        name="whatsapp"
+                        value={formData.whatsapp}
                         onChange={handleChange}
-                        placeholder="Your Email Address"
+                        placeholder="Your WhatsApp Number"
                         required
+                        pattern="[0-9+\-\s]{8,15}"
+                        title="Please enter a valid WhatsApp number"
                         className="
                             w-full
                             rounded-xl
@@ -153,6 +177,8 @@ const Contact = () => {
                             focus:ring-[#ff014f]/30
                         "
                     />
+
+                    {/* Message */}
 
                     <textarea
                         name="message"
@@ -180,6 +206,8 @@ const Contact = () => {
                         "
                     />
 
+                    {/* Submit */}
+
                     <button
                         type="submit"
                         disabled={status.loading}
@@ -203,10 +231,12 @@ const Contact = () => {
                             ? "Sending..."
                             : "Send Inquiry"}
                     </button>
+
                 </form>
             </div>
 
             {/* Toast */}
+
             {status.message && (
                 <div
                     className="
