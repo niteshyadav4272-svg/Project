@@ -104,62 +104,135 @@ const portfolioData = {
     ],
 
     // project
-    projects: [
+projects: [
     {
-        title: "Filemoon",
+        id: 1,
+
+        title: "crm-techsunset.com",
 
         description:
-            "A full-stack file management platform built with React, Node.js, Express.js and MongoDB. The application focuses on file handling, API integration, authentication and a responsive user experience.",
-
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+            "CRM software used to manage customers, leads, sales, and customer interactions in one place.",
 
         technologies: [
-            "React.js",
+            "React",
+            "Next.js",
             "Node.js",
-            "Express.js",
+            "Express",
             "MongoDB",
-            "REST API",
+            "Redis",
         ],
 
-        github: "https://github.com/",
+        image: "/photo/crm.png",
+
+        liveDemo: "https://crm.techsunset.com",
+
+        label: "CRM Platform",
+
+        workedOn: [
+            "Built customer and lead management interfaces with reusable React components",
+            "Developed REST APIs for customer CRUD operations and lead workflows",
+            "Implemented search, filtering and customer status management",
+            "Integrated authentication, authorization and request validation",
+            "Optimized API communication and database queries for smoother dashboard performance",
+        ],
     },
 
     {
-        title: "Bestie",
+        id: 2,
+
+        title: "TechSunset HRMS",
 
         description:
-            "A modern full-stack web application developed with React, Node.js, Express.js and MongoDB, featuring a responsive frontend, REST APIs and database-driven functionality.",
-
-        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3",
+            "Human Resource management software used to manage employees, attendance, leaves, onboarding, departments, holidays, and HR reports.",
 
         technologies: [
-            "React.js",
+            "React",
+            "Next.js",
             "Node.js",
-            "Express.js",
+            "Express",
             "MongoDB",
-            "JWT",
+            "Redis",
         ],
 
-        github: "https://github.com/",
+        image: "/photo/hr.png",
+
+        liveDemo: "https://hr.techsunset.com",
+
+        label: "HR Platform",
+
+        workedOn: [
+            "Developed employee, attendance and leave management workflows",
+            "Built reusable dashboard components and data-driven HR interfaces",
+            "Created REST APIs for employee, attendance and leave operations",
+            "Implemented validation, authentication and role-based access flows",
+            "Improved data handling for HR dashboards and operational reports",
+        ],
     },
 
     {
-        title: "E-Commerce Platform",
+        id: 3,
+
+        title: "TechSunset Inventory",
 
         description:
-            "A complete full-stack e-commerce application designed around product management, user workflows, REST APIs and MongoDB-based data management.",
-
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+            "Inventory management software used to manage products, stock, orders, suppliers, warehouses, and fulfillment.",
 
         technologies: [
-            "React.js",
+            "React",
+            "Next.js",
             "Node.js",
-            "Express.js",
+            "Express",
             "MongoDB",
-            "REST API",
+            "Redis",
+            "BullMQ",
         ],
 
-        github: "https://github.com/",
+        image: "/photo/inventory.png",
+
+        liveDemo: "https://inventory.techsunset.com",
+
+        label: "Inventory Platform",
+
+        workedOn: [
+            "Developed product, stock and order management interfaces",
+            "Created APIs for inventory, supplier and warehouse operations",
+            "Implemented stock updates and order processing workflows",
+            "Used background job processing for asynchronous inventory operations",
+            "Improved API performance through efficient data handling and caching",
+        ],
+    },
+
+    {
+        id: 4,
+
+        title: "TechSunset Project Management",
+
+        description:
+            "Project and task management software used to manage projects, tasks, deadlines, milestones, team workload, and progress.",
+
+        technologies: [
+            "React",
+            "Next.js",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "PostgreSQL",
+            "Prisma",
+        ],
+
+        image: "/photo/project.png",
+
+        liveDemo: "https://project.techsunset.com",
+
+        label: "Project Management",
+
+        workedOn: [
+            "Built project, task and team workload management interfaces",
+            "Developed REST APIs for projects, tasks, milestones and deadlines",
+            "Implemented structured data access using Prisma ORM",
+            "Created task assignment, status and priority management workflows",
+            "Improved application structure with reusable components and optimized API flows",
+        ],
     },
 ],
   
