@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
-
+import path from 'path'
 
 import messageRoutes from "./routes/messageRoutes.js";
 
@@ -23,21 +23,19 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+const __dirname = path.resolve()
 
 
-console.log(process.env.SMPT_PASSWORD)
-console.log(process.env.SMPT_EMAIL)
+
+
 app.use("/api/messages", messageRoutes);
 
-app.get("/", (req, res) => {
-    res.json({
-        success: true,
-        message: "Portfolio API is running",
-    });
+
+app.use(express.static(path.join(__dirname,'/frontend/dist')))
+app.get('/{*splat}', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
 });
 
 const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT,()=>{console.log('server is running')});
