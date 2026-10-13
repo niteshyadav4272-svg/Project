@@ -182,8 +182,8 @@ const Navbar = () => {
 
                         {/* Hire Me */}
                         <a
-                            href="#contact"
-                            onClick={() => handleNavClick("contact")}
+                           href="https://wa.me/918808891857?text=Hi%20Nitesh%2C%20I%20came%20across%20your%20portfolio%20and%20I%E2%80%99m%20interested%20in%20hiring%20you."
+                            target="_blank"
                             className="
                                 hidden
                                 items-center
@@ -301,10 +301,8 @@ const Navbar = () => {
                         })}
 
                         <a
-                            href="#contact"
-                            onClick={() =>
-                                handleNavClick("contact")
-                            }
+                            href="https://wa.me/918808891857?text=Hi%20Nitesh%2C%20I%20came%20across%20your%20portfolio%20and%20I%E2%80%99m%20interested%20in%20hiring%20you."
+                            target="_blank"  
                             className="
                                 mt-3
                                 flex

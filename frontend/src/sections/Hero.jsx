@@ -265,7 +265,7 @@ const Hero = () => {
                                         sm:text-2xl
                                     "
                                 >
-                                    1.5+
+                                    1.5
                                 </span>
 
 

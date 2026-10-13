@@ -115,7 +115,7 @@ const Resume = () => {
                             <div className="mt-9 flex flex-wrap gap-3">
 
                                 <a
-                                    href="/resume.pdf"
+                                    href='/resume.pdf'
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="
@@ -141,7 +141,7 @@ const Resume = () => {
                                 </a>
 
                                 <a
-                                    href="/resume.pdf"
+                                    href='/resume.pdf'
                                     download="Nitesh-Yadav-Resume.pdf"
                                     className="
                                         inline-flex

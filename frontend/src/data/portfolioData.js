@@ -6,7 +6,7 @@ const portfolioData = {
         location: "India",
         email: "niteshyadav4272@gmail.com",
         description:
-            "Full Stack Developer with 1.5+ years of experience building web applications using React, Node.js, Express.js, MongoDB, Next.js, and AWS. Experienced in developing REST APIs, authentication systems, responsive interfaces, and scalable backend solutions.",
+            "Full Stack Developer with 1.5 years of experience building web applications using React, Node.js, Express.js, MongoDB, Next.js, and AWS. Experienced in developing REST APIs, authentication systems, responsive interfaces, and scalable backend solutions.",
     },
 
     socialLinks: [
@@ -40,12 +40,12 @@ const portfolioData = {
 
     experience: [
     {
-        role: "Full Stack Developer Intern",
+        role: "Full Stack Developer",
         company: "Techsunset",
         location: "Bengaluru, India",
         startDate: "April 2025",
-        endDate: "Present",
-        duration: "1.5+ Years",
+        endDate: "15 OCTOBER",
+        duration: "1.5 Years",
 
         description:
             "Worked on full-stack web applications, developing responsive frontend interfaces and scalable backend services using modern JavaScript technologies.",
@@ -232,6 +232,68 @@ projects: [
             "Implemented structured data access using Prisma ORM",
             "Created task assignment, status and priority management workflows",
             "Improved application structure with reusable components and optimized API flows",
+        ],
+    },
+
+    {
+        id: 5,
+
+        title: "books.techsunset.com",
+
+        description:
+            "TechSunset Books is accounting and invoicing software used to manage invoices, payments, expenses, customers, vendors, GST, and financial reports in one place.",
+
+        technologies: [
+            "React",
+            "Next.js",
+            "Node.js",
+            "Express",
+            "MongoDB",
+        ],
+
+        image: "/photo/books.png",
+
+        liveDemo: "https://books.techsunset.com",
+
+        label: "Accounting & Invoicing",
+
+        workedOn: [
+            "Built dashboard interfaces for financial summaries and business insights",
+            "Developed invoice creation, editing and listing workflows",
+            "Implemented customer, vendor, expense and payment management screens",
+            "Integrated GST summaries and financial reporting data with backend APIs",
+            "Created API integrations with form validation and error handling for reliable financial workflows",
+        ],
+    },
+
+    {
+        id: 6,
+
+        title: "tscampus.com",
+
+        description:
+            "TS Campus is a school management system used to manage admissions, students, attendance, fees, exams, staff, communication, and other school operations in one place.",
+
+        technologies: [
+            "React",
+            "Next.js",
+            "Node.js",
+            "Express",
+            "MongoDB",
+        ],
+
+        image: "/photo/tcCampus.png",
+
+        liveDemo: "https://tscampus.com",
+
+        label: "School Management",
+
+        workedOn: [
+            "Developed student, admission and academic management interfaces",
+            "Built attendance, fee, class, section and subject management workflows",
+            "Implemented exam, result and report-card related screens",
+            "Integrated staff management, notifications and dashboard reporting features",
+            "Connected frontend modules with backend APIs using validation and structured error handling",
         ],
     },
 ],
