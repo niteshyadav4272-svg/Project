@@ -1,11 +1,10 @@
-import Message from "../models/Message.js";
 import nodemailer from "nodemailer";
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
-
     auth: {
         user: process.env.SMPT_EMAIL,
         pass: process.env.SMPT_PASSWORD,
@@ -24,19 +23,10 @@ export const createMessage = async (req, res) => {
             });
         }
 
-        // Save message in MongoDB
-        const newMessage = await Message.create({
-            name,
-            whatsapp,
-            message,
-        });
-
-        // Send email
+        // Send Email
         await transporter.sendMail({
             from: process.env.SMPT_EMAIL,
-
             to: process.env.SMPT_EMAIL,
-
             subject: `New Portfolio Inquiry from ${name}`,
 
             html: `
@@ -107,36 +97,17 @@ export const createMessage = async (req, res) => {
             `,
         });
 
-     
-        res.status(201).json({
+        return res.status(200).json({
             success: true,
             message: "Message sent successfully",
-            data: newMessage,
         });
 
     } catch (error) {
-        res.status(500).json({
+        console.error("Email error:", error);
+
+        return res.status(500).json({
             success: false,
-            message: error.message,
-        });
-    }
-};
-
-export const getMessages = async (req, res) => {
-    try {
-        const messages = await Message
-            .find()
-            .sort({ createdAt: -1 });
-
-        res.status(200).json({
-            success: true,
-            messages,
-        });
-
-    } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: error.message,
+            message: "Failed to send message",
         });
     }
 };
