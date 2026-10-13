@@ -102,12 +102,15 @@ export const createMessage = async (req, res) => {
             message: "Message sent successfully",
         });
 
-    } catch (error) {
-        console.error("Email error:", error);
+    } 
 
-        return res.status(500).json({
-            success: false,
-            message: "Failed to send message",
-        });
-    }
+    catch (error) {
+    console.error("Email error:", error);
+
+    return res.status(500).json({
+        success: false,
+        message: error.message,
+        code: error.code,
+    });
+}
 };
