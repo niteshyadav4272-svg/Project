@@ -9,6 +9,9 @@ const transporter = nodemailer.createTransport({
         user: process.env.SMPT_EMAIL,
         pass: process.env.SMPT_PASSWORD,
     },
+     connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
 });
 
 export const createMessage = async (req, res) => {
